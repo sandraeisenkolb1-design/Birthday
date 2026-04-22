@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bithdax.exe</title>
+
+<style>
+
+body {
+background-color: black;
+color: #00ff00;
+font-family: monospace; 
+text-align: center;
+padding-top: 100px;
+}
+
+button {
+background-color: black;
+color: #00ff00;
+border: 1px solid #00ff00;
+padding:10px 20px;
+font-size: 16px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #00ff00;
+color: black;
+}
+</style>
+</head>
+
+<body> 
+
+<div id="start">
+<h1>System Altert:Birthday.exe wurde gestartet</h1>
+<p>Willkommen im System...</p>
+<button onclick="startProgram()">Programm starten</button>
+</div>
+
+<div id="password" style="display:none;">
+<h1>Zugriff erforderlich</h1>
+<p>Bitte gib das richtige Passwort ein:</p>
+
+<input type="text" id="inputPw">
+<br>
+<button onclick="checkPassword()">Bestätigen</button>
+<p id="error" style="color:red;"></p>
+</div>
+
+<script> 
+function startProgram() {
+document.getElementById("start").style.display="none";
+document.getElementById("password").style.display="block";
+}
+function checkPassword() {
+var pw = document.getElementById("inputPw").value;
+
+if(pw === "18032015") {
+alert("Zugriff gewährt ❤️");
+} else { 
+document.getElementById("error").innerText = "falsches Passwort 😜";
+}
+}
+</script>
+
+</body>
+</html>
